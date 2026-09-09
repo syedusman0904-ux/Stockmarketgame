@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Detail - StockMarket Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='home.html'"><i class="fas fa-chart-line"></i> StockMarket</div>
+        <div class="header-center">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search..." onkeydown="if(event.key==='Enter'){window.location.href='search.html?query='+encodeURIComponent(this.value)}">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="update-timer"><i class="fas fa-clock"></i><span id="countdown">2:00</span></div>
+            <div class="coins-badge"><i class="fas fa-coins"></i><span id="headerCoins">20,000</span></div>
+            <div class="user-badge" onclick="window.location.href='account.html'"><i class="fas fa-user-circle"></i><span id="headerUserName">User</span></div>
+            <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </header>
+
+    <div class="detail-container" id="detailContainer">
+        <!-- dynamically filled -->
+    </div>
+
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg"></span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+    <script src="script.js"></script>
+</body>
+</html>
